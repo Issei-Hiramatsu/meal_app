@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import './models/category.dart';
 
-const  DUMMY_CATEGORIES = ConstraintsTransformBox[
+final DUMMY_CATEGORIES = [
   Category(
     id: 'c1',
     title: 'Italian',
