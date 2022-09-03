@@ -21,9 +21,22 @@ class MealItem extends StatelessWidget {
       case Complexity.Simple:
         return 'Simple';
       case Complexity.Challenging:
-        return 'Simple';
+        return 'Challenging';
       case Complexity.Hard:
+        return 'Hard';
+      default:
+        return 'Unknown';
+    }
+  }
+
+  String get affordabilityText {
+    switch (affordability) {
+      case Affordability.Affordable:
         return 'Simple';
+      case Affordability.Pricey:
+        return 'Pricey';
+      case Affordability.Luxurious:
+        return 'Luxurious';
       default:
         return 'Unknown';
     }
@@ -99,6 +112,17 @@ class MealItem extends StatelessWidget {
                             width: 6,
                           ),
                           Text(complexityText),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.work,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text(affordabilityText),
                         ],
                       ),
                     ],
